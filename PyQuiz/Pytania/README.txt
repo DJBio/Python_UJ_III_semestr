@@ -1,1 +1,1 @@
-To jest obowiązkowa dyrektoria, gdzie program przechowywa pytania w plikach .json
+To jest obowiązkowa dyrektoria, gdzie program przechowywa pytania i tematy w plikach .json
