@@ -1,0 +1,29 @@
+{
+   "Ilość pytań": 3,
+   "1": {
+      "pytanie": "Glukoza należy do",
+      "odpowiedzi": [
+         "Aldoz",
+         "Ketoz"
+      ],
+      "poprawna_odp": 1
+   },
+   "2": {
+      "pytanie": "Ryboza jest ...",
+      "odpowiedzi": [
+         "Triozą",
+         "Heksozą",
+         "Pentozą"
+      ],
+      "poprawna_odp": 3
+   },
+   "3": {
+      "pytanie": "Początek glukoneogenezy zachodzi w",
+      "odpowiedzi": [
+         "cytoplazmie",
+         "mitochondrium",
+         "ER"
+      ],
+      "poprawna_odp": 2
+   }
+}
