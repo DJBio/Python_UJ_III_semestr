@@ -1,5 +1,5 @@
 {
-   "Ilość pytań": 1,
+   "Ilość pytań": 2,
    "1": {
       "pytanie": "Co zawiera lecytyna?",
       "odpowiedzi": [
@@ -8,5 +8,15 @@
          "benzynę"
       ],
       "poprawna_odp": 2
+   },
+   "2": {
+      "pytanie": "Fosfolipidy niekoniecznie zawierają",
+      "odpowiedzi": [
+         "resztę choliny",
+         "resztę glicerolu",
+         "resztę kwasu fosforowego",
+         "reszty kwasów tłuszczowych"
+      ],
+      "poprawna_odp": 1
    }
 }
