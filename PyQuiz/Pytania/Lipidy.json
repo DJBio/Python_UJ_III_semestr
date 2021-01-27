@@ -1,0 +1,12 @@
+{
+   "Ilość pytań": 1,
+   "1": {
+      "pytanie": "Co zawiera lecytyna?",
+      "odpowiedzi": [
+         "galaktozę",
+         "cholinę",
+         "benzynę"
+      ],
+      "poprawna_odp": 2
+   }
+}

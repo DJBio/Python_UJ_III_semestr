@@ -6,7 +6,7 @@
          "Puryna",
          "Pirymidyna"
       ],
-      "poprawna_odp": "1"
+      "poprawna_odp": 1
    },
    "2": {
       "pytanie": "Tymidyna to ...",
@@ -14,7 +14,7 @@
          "Nukleotyd",
          "Nukleozyd"
       ],
-      "poprawna_odp": "2"
+      "poprawna_odp": 2
    },
    "3": {
       "pytanie": "DNA zawiera ...",
@@ -22,6 +22,6 @@
          "Nukleotydy",
          "Nukleozydy"
       ],
-      "poprawna_odp": "1"
+      "poprawna_odp": 1
    }
 }
