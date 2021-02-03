@@ -4,10 +4,11 @@ import os
 import sys
 
 def top_list():
-    with open(os.path.join(sys.path[0],'Pytania','TEMATY.json'), 'r', encoding='utf8') as f:
+    with open(os.path.join(sys.path[0],'Pytania','TEMATY.json'), 'r',
+            encoding='utf8') as f:
         global TOPICS_LIST
         TOPICS_LIST = json.load(f)
-#ta lista ma łączyć nazwy plików JSON z pytaniami z możliwością wyboru kategorii w test()
+#ta lista ma łączyć nazwy plików JSON z pytaniami => wybór kategorii w test()
 
 
 def dodanie_pytanie_dziedzina():
@@ -19,7 +20,8 @@ def dodanie_pytanie_dziedzina():
             print("({})-> {}".format(x+1,TOPICS_LIST[x]))
         choice = int(input("\nWprowadź numer tematu lub 0:"))
         if choice == 0:
-            with open(os.path.join(sys.path[0],'Pytania','TEMATY.json'), 'r+', encoding='utf8') as f:
+            with open(os.path.join(sys.path[0],'Pytania','TEMATY.json'), 'r+',
+                    encoding='utf8') as f:
                 TOPICS_LIST.append(input('Wprowadź nazwę nowej dziedziny:\n'))
                 json.dump(TOPICS_LIST, f, ensure_ascii=False, indent=1)
             top_list()
@@ -31,7 +33,8 @@ def dodanie_pytanie_dziedzina():
         flag = True
 
     if not flag:
-        add_question(os.path.join(sys.path[0],'Pytania',TOPICS_LIST[choice-1]+'.json'))
+        add_question(os.path.join(sys.path[0],'Pytania',
+            TOPICS_LIST[choice-1]+'.json'))
     else:
         dodanie_pytanie_dziedzina()# od nowa jeżeli flaga = True
         
@@ -48,7 +51,7 @@ def add_question(filename, pytanie = None, pyt_z_odp = None):
         if play.lower() not in ['0', 'n', 'nie','t','1','tak','']:
             raise ValueError("Poprawne wartości: Enter/Y or 0/N")
         if play.lower() in ['0', 'n','nie'] :
-            return print(' '*32+"Do widzenia\n"+'_'*75)
+            return print('\n{:_^80s}\n'.format("DANE ZAPISANO"))
         if not pytanie:
             nowe_pytanie = {}               
             nowe_pytanie = {"pytanie" : input("Proszę o wprowadzenie pytania:\n")}
@@ -61,8 +64,8 @@ def add_question(filename, pytanie = None, pyt_z_odp = None):
                 if ile < 1:
                     raise ValueError
                 for x in range (ile):
-                    #nowe_pytanie["odpowiedzi"].append("{}.".format(x+1) + input("Proszę o wprowadzenie wariantu odpowiedzi:\n{}.".format(x+1))) #odpowiedzi z num. na przodzie
-                    nowe_pytanie["odpowiedzi"].append(input("Proszę o wprowadzenie wariantu odpowiedzi:\n{}.".format(x+1)))
+                    nowe_pytanie["odpowiedzi"].append(input("Proszę o "
+                        "wprowadzenie wariantu odpowiedzi:\n{}.".format(x+1)))
             except ValueError as e:
                 print("Niepoprawna wartość. Wprowadź naturalną liczbę większą od 0\n")
                 return add_question(filename, nowe_pytanie) # zaczyna od razu od miejsca gdzie rzucono ValueError
