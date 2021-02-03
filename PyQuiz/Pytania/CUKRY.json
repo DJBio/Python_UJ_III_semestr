@@ -1,5 +1,5 @@
 {
-   "Ilość pytań": 3,
+   "Ilość pytań": 5,
    "1": {
       "pytanie": "Glukoza należy do",
       "odpowiedzi": [
@@ -25,5 +25,24 @@
          "ER"
       ],
       "poprawna_odp": 2
+   },
+   "4": {
+      "pytanie": "Proces syntezy glikogenu to",
+      "odpowiedzi": [
+         "glukoneogeneza",
+         "glikoliza",
+         "glikogenoliza",
+         "glikogenogeneza"
+      ],
+      "poprawna_odp": 4
+   },
+   "5": {
+      "pytanie": "Laktoza składa się z",
+      "odpowiedzi": [
+         "glukozy i mannozy",
+         "galaktozy i mannozy",
+         "glukozy i galaktozy"
+      ],
+      "poprawna_odp": 3
    }
 }
