@@ -1,10 +1,15 @@
-Witam użytkowniku!
-Czytasz dokument wprowadzający w działanie konsolowego programu PyQuiz.
-Ten program pozwała na:
-  1. Stworzenie własnej puli zamkniętych pytań jednokrotnego wyboru w odrębnych kategoriach (dane formatu json)
-z możliwością wprowadzenia dowolnej liczby możliwych wariantów odpowiedzi
+# PyQu
+PyQu jest małym programem konsolowym, pozwalający tworzyć pule pytań
 
-  2. Program, na podstawie wybranej kategorii (pula pytań, odrębny plik .json w katalogu /Pytania), przeprowadza test.
+----
+
+Ten program pozwała na:
+
+1. Stworzenie własnej puli zamkniętych pytań jednokrotnego wyboru w odrębnych 
+kategoriach (dane formatu json) z możliwością wprowadzenia dowolnej liczby 
+możliwych wariantów odpowiedzi
+^
+1. Program, na podstawie wybranej kategorii (pula pytań, odrębny plik .json w katalogu /Pytania), przeprowadza test.
 
 Wszystkie możliwości programu są realizowane w konsoli uruchomiając moduł /START
 
@@ -12,10 +17,36 @@ Wymagania modułowe Python:
 json, tabulate
 
 
-*This text will be italic*
-_This will also be italic_
+- list one - item 1
+- list one - item 2
+   - sub item 1
+   - sub item 2
+- list one - item 3
+^
+- list two - item A
+- list two - item B
 
-**This text will be bold**
-__This will also be bold__
+Foobar is a Python library for dealing with word pluralization.
 
-_You **can** combine them_
+### Instalacja
+
+Pobierz całą zawartość katalogu [PuQu][url_1].
+
+```
+print ('Działam')
+```
+
+## Usage
+
+```
+import foobar
+
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
+
+## Licencja
+[MIT](https://choosealicense.com/licenses/mit/)
+
+[url_1]: https://github.com/DJBio/Python_UJ_III_semestr/tree/main/PyQu
