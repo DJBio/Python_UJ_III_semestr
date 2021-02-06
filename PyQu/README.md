@@ -21,7 +21,7 @@ przeprowadza test.
 1. Uruchomienie programu:
 	- uruchom plik START.py
 		
-		>bądź
+		bądź
 		
 	- wydaj polecenie w konsoli (z katalogu gdzie znajduje się plik START.py)
 	```bash
