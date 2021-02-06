@@ -13,11 +13,12 @@ możliwych wariantów odpowiedzi
 
 1. Pobierz całą zawartość katalogu [PuQu][url_1].
 1. Urochom programu:
-
 	- uruchom plik START.py
-	
-bądź
+		
+		bądź
+		
 	- wydaj polecenie w konsoli (z katalogu gdzie znajduje się plik START.py)
+
 ```bash
 >py .\START.py
 ```
