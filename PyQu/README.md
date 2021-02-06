@@ -27,8 +27,8 @@ przeprowadza test.
 	```bash
 	>py .\START.py
 	```
-1. Wszystkie opisane wyżej możliwości programu są realizowane wydawając
-odpowiednie polecenia w konsoli wg wyświetlanych instrukcji
+1. Wszystkie opisane wyżej możliwości programu są realizowane przez 
+wydawanie odpowiednich poleceń w konsoli wg wyświetlanych instrukcji
 
 
 ## Struktura programu
