@@ -1,5 +1,5 @@
 {
-   "Ilość pytań": 5,
+   "Ilość pytań": 6,
    "1": {
       "pytanie": "Glukoza należy do",
       "odpowiedzi": [
@@ -44,5 +44,14 @@
          "glukozy i galaktozy"
       ],
       "poprawna_odp": 3
+   },
+   "6": {
+      "pytanie": "Który cukier nie jest redukujący?",
+      "odpowiedzi": [
+         "glukoza",
+         "sacharoza",
+         "laktoza"
+      ],
+      "poprawna_odp": 2
    }
 }
