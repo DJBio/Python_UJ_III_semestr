@@ -8,7 +8,7 @@ def begin_prompt(flag = 1):
         AskModule(user)
         #am.play_quiz()
     else:
-        print('Zbyt krótkie imię, wprowadź powyżej 2 znaków')
+        print('Zbyt krótkie imię, wprowadź powyżej 2 znaków.\n')
         begin_prompt(0)
         
 
