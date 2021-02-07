@@ -21,9 +21,6 @@ class AskModule:
             print(tabulate([[x] for x in dane["odpowiedzi"]],
                 headers = ['#',dane["pytanie"]],tablefmt="fancy_grid",
                 showindex=range(1,len(dane["odpowiedzi"])+1)))
-            #print(dane['pytanie'])
-            #for x in range(len(dane['odpowiedzi'])):
-            #    print(dane['odpowiedzi'][x])
         
         try:
             choice = int(input("Wpisz swoją odpowiedź: "))
@@ -42,11 +39,11 @@ class AskModule:
             return -1
 
     def test(self,questions):
-        print('\nKrótkie wprowadzenie:\n1. Wprowadzaj tylko symnbol (A/a/1) '
+        print('\nKrótkie wprowadzenie:\n1. Wprowadzaj tylko numer (1/2/...) '
             'odpowiadający poprawnej odpowiedzi.\n2. Poprawna odpowiedź daje'
-            '2 pkt.\n3. Za złą odpowiedź dostajesz -1\nTest zaraz się zacznie.'
+            ' 2 pkt.\n3. Za złą odpowiedź dostajesz -1 pkt.\nTest zaraz się zacznie.\n'
             'Powodzenia!')
-        time.sleep(1)
+        time.sleep(3)
         for key, meta in questions.items():
             if key in ("Ilość pytań",):
                 continue
@@ -55,7 +52,7 @@ class AskModule:
                 self.score += self.zapytaj(meta)
         print('\n{:_^80s}\n'.format("KONIEC"))
         print('{} twój wynik: {}'.format(self.name, self.score))
-        self.rebegin_prompt(1)
+        self.rebegin_prompt()
     
     @staticmethod
     def load_question(filename):
@@ -67,12 +64,13 @@ class AskModule:
             qs = json.load(read_file)
         return (qs)
 
-    def play_quiz(self):
+    def play_quiz(self, flag_2 = 1):
         flag = 1
         try:
-            for x in range(len(aq.TOPICS_LIST)):
-                print("({})-> {}".format(x+1,aq.TOPICS_LIST[x]))
-            print("(+)-> Dodać pytanie")
+            if flag_2:
+                for x in range(len(aq.TOPICS_LIST)):
+                    print("({})-> {}".format(x+1,aq.TOPICS_LIST[x]))
+                print("(+)-> Dodać pytanie")
             choice = input("Wprowadź numer tematu:")
             if choice == '+':
                 aq.dodanie_pytanie_dziedzina()
@@ -80,34 +78,31 @@ class AskModule:
             else:
                 choice = int(choice)
                 if choice > len(aq.TOPICS_LIST) or choice < 1:
-                    print("Niepoprawna wartość. Wprowadź od nowa")
+                    print("Niepoprawna wartość. Wprowadź od nowa.\n")
                     flag = -1
         except ValueError as e:
-            print("Niepoprawna wartość. Wprowadź od nowa")
+            print("Niepoprawna wartość. Wprowadź od nowa.\n")
             flag = -1
 
         if flag == 1:
             self.test(self.load_question(os.path.join(sys.path[0],
                 'Pytania',aq.TOPICS_LIST[choice-1]+'.json')))
         elif flag == -1:
-            self.play_quiz() # od nowa jeżeli flaga = True
+            self.play_quiz(0) # od nowa jeżeli flaga = True
         elif flag == 0:
             self.rebegin_prompt()
 
     
-    def rebegin_prompt(self, flag = 0):
-        print("\nCzy chcesz kontynuować?\nA. Tak\nB. Nie")
+    def rebegin_prompt(self):
+        print("\nCzy chcesz kontynuować?\nTak - [Enter]\nNie - [0]")
         play = input()
-        if play.lower() in ['b', 'n','nie']:
+        if play.lower() in ['0', 'n','nie']:
             return print('{:~^80s}'.format("ZAPRASZAM PONOWNIE"))
         
-        if play.lower() in ['a', 't', 'tak']:
-            if flag:
-                print("\n\nWybierz dziedzinę pytań:")
+        if play.lower() in ['', 't', 'tak']:
+            print("\nWybierz dziedzinę pytań:")
             self.play_quiz()
         else:
-            print("\nNie rozumiem, chyba literówka.\nNaciśnij T aby zagrać,"
-            " czy N aby wyjść.\n")
-            self.rebegin_prompt(1)
-
-
+            print("Niepoprawna wartość. Wprowadź od nowa.\n"
+                "Poprawne wartości: Enter/Tak/T lub 0/Nie/N")
+            self.rebegin_prompt()
